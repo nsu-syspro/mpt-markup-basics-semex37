@@ -1,19 +1,24 @@
 \documentclass[12pt]{article}
 \setlength{\parindent}{1.25cm}
+\usepackage{cmap}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english, russian]{babel}
 \setlength{\parskip}{1em}
 \usepackage{changepage}
 \begin{document}
-\textbf{{\Large 1    Sequence limit}}
+\textbf{{\Large 1    Решение квадратного уравнения}}
 
-\textit{Task:} find the limit of the following sequence:
-$$x_{n} = \frac{n^{3}-3n^{2}-5n+4}{-3n^{3}+7n^{2}+9n-20}$$
+\textit{Задача:} решить уравнение: $2x^{2}+5x-12=0$
 \begin{adjustwidth}{5em}{0cm}
-\textit{Solution.} This is a common sequence with type $\frac{\infty}{\infty}$ To find the limit of a given sequence, one needs to divide both the numerator and the denominator by the largest degree of $n$. In this example it is $n^{3}$.
-$$\displaystyle \lim_{n \to \infty}(x_{n}) = \lim_{n \to \infty}(\frac{n^{3}-3n^{2}-5n+4}{-3n^{3}+7n^{2}+9n-20}) = \dots$$
-$$\displaystyle = \lim_{n \to \infty}(\frac{1-\frac{3}{n} - \frac{5}{n^{2}} + \frac{4}{n^{3}}}{-3+\frac{7}{n} + \frac{9}{n^{2}} - \frac{20}{n^{2}}}).$$
-The next step is applying limit to both the numerator and the denominator and to each term.
-$$ \frac{\lim_{n \to \infty}(1)-\lim_{n \to \infty}(\frac{3}{n}) - \lim_{n \to \infty}(\frac{5}{n^{2}}) + \lim_{n \to \infty}(\frac{4}{n^{3}})}{{\lim_{n \to \infty}(-3)+\lim_{n \to \infty}(\frac{7}{n}) + \lim_{n \to \infty}(\frac{9}{n^{2}}) - \lim_{n \to \infty}(\frac{20}{n^{2}})}} = \dots$$
-$$ = \frac{1 - 0 - 0 + 0}{-3 + 0 + 0 - 0} = -\frac{1}{3}.$$
-\textit{Answer.} $\displaystyle \lim_{n \to \infty}(x_{n}) = -\frac{1}{3}$
+  \textit{Решение.} Это квадратное уравнение, общий вид которого:
+  $$ax^{2}+bx+c=0$$
+  В нашем случае $a = 2, b = 5, c = -12$. \\
+  Сначала необходимо вычислить дискриминант уравнения:
+  $$D = b^{2}-4ac=(5)^{2} - 4 \cdot 2 \cdot (-12) = 121$$
+  Так как дискриминант является положительным $(D>0)$, это уравнение имеет два корня, вычисляемые по формуле:
+  $$x_{1,2}= \frac{-b \pm \sqrt{D}}{2a} = \frac{-5 \pm 11}{4}$$
+  Таким образом, $x_{1} = -\frac{16}{4} = -4, x_{2} = \frac{6}{4} = \frac{3}{2}$. \\
+  \textit{Ответ:} $\displaystyle x_{1} = -4, x_{2} = \frac{3}{2}.$
 \end{adjustwidth}
 \end{document}

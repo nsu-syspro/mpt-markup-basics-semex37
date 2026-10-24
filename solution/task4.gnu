@@ -1,5 +1,3 @@
-set terminal pngcairo enhanced size 1000,500 font "Verdana,10"
-
 set xdata time
 set timefmt "%Y-%m-%d"
 
